@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'/>
+  <link href="http://allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Lato:400,100,300,700,900|Raleway:400,100,200,300,500,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("images/conference1.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("images/conference2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("images/conference3.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+ <script>
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+  
+  window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+  </script>
+</head>
+<body>
+<span class="desktop">
+    <header>
+      <span id="logo">Black Rabbit</span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About Us</a>
+        <a href="#">Login</a>
+      </nav>
+    </header>
+  </span>
+  
+  <script src="js/home.js"></script>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border" style="font-variant:small-caps;">Corporate Events</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Time to Suit Up!</h3>
+  <p align="center">For companies of all sizes- fom startups to the Fortune 500, networking is essential. Nobody understands this need more than us at Black Rabbit!<br>
+  Not only do we cater to networking events of all sizes, We ensure everything goes off without a hitch. We also excel at hosting conferences, meetings, luncheons and celebratory parties.
+
+  <br><b>So Suit Up and let us do the rest!</b></p>
+  
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #ffffff;">You have a million things to do...</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p align ="center"><b>...and planning for these events is not one of them.</p></b>
+	<p align="center">	With the expert care and attention to detail that goes into every single one of our events, the days where you used to spend your valuable company's time on worrying and planning these events are now long behind you.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #ffffff;">SIGN UP NOW!</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p align="center">With a special corporate membership, your company can now avail of Black Rabbit's facilities for all corporate events. Sign up to become a member of the Black Rabbit family!</p>
+  </div>
+</div>
+
+
+
+</body>
+</html>

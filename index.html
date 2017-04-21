@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<!-- saved from url=(0014)about:internet -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/home.css" />
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+  <link href="http://allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Lato:400,100,300,700,900|Raleway:400,100,200,300,500,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/home.js">
+  <script>
+   //scroll to top on refresh//
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+}
+
+jQuery(document).ready(function($) {
+
+  $(window).load(function() {
+    $('.loading').delay(2000).fadeOut('slow', function() {
+      $(this).remove();
+    });
+    setTimeout(function() {
+      $('.landing').addClass('loaded');
+    }, 2000);
+    setTimeout(function() {
+      $('body').addClass('loaded');
+    }, 2000);
+
+  });
+
+  window.addEventListener('load', function() {
+
+    var one = document.querySelector('.one');
+    var two = document.querySelector('.two');
+    var three = document.querySelector('.three');
+    delay = 2500;
+
+    setTimeout(function() {
+      $('.content-1').addClass('loaded');
+    }, 2000);
+
+    var animation = function() {
+      setTimeout(function() {
+        one.style.top = '50%';
+      }, delay);
+      setTimeout(function() {
+        one.style.top = '100%';
+      }, delay * 5);
+
+      setTimeout(function() {
+        two.style.top = '50%';
+      }, delay * 6);
+      setTimeout(function() {
+        two.style.top = '100%';
+      }, delay * 11);
+
+      setTimeout(function() {
+        three.style.top = '50%';
+      }, delay * 12);
+      setTimeout(function() {
+        three.style.top = '100%';
+      }, delay * 17);
+    };
+    animation();
+    setInterval(animation, delay * 18);
+  });
+
+  window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+
+  $(window).scroll(function() {
+    $('.hideme').each(function(i) {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate({
+          'opacity': '1'
+        }, 1250);
+      }
+    });
+  });
+
+  $(".mouseScroll").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".about").offset().top - 150
+    }, 800);
+  });
+
+  window.onload = function() {
+    $('.button_container').click(function() {
+      $('.button_container').toggleClass('active');
+      $('.overlay').toggleClass('open');
+      $('body').toggleClass('active');
+    });
+  }
+
+});
+  </script>
+</head>
+
+
+<body>
+  <!--Preloader-->
+  <div class="loading">
+    <div class="svg-wrapper">
+      <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+      <rect class="animate" height="150" width="150" />
+    </svg>
+      <div class="text">
+        <span class="logo">Black Rabbit</span>
+        <span class="motto">We turn dreams into reality.</span>
+      </div>
+    </div>
+  </div>
+
+  <!--SVG animation-->
+  <script>
+    var p = document.querySelector('.animate'),
+      offset = 600;
+    var offsetMe = function() {
+      if (offset < 0) {
+        offset = 600;
+      }
+      p.style.strokeDashoffset = offset;
+      offset = offset - 5;
+      requestAnimationFrame(offsetMe);
+    }
+    offsetMe();
+  </script>
+
+  <!--Desktop Navigation-->
+  <span class="desktop">
+    <header>
+      <span id="logo">Black Rabbit</span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#"> Events </a>
+        <a href="#">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Login</a>
+      </nav>
+    </header>
+  </span>
+
+  <!--Homepage-->
+  <div class="wrapper">
+    <div class="landing"></div>
+  </div>
+
+  <!--Intro text scroll-->
+  <div class="content-1">
+    <span class="one">We manage events.</span>
+    <span class="two">Rand Text</span>
+    <span class="three">Rand text</span>
+  </div>
+
+  <!--Mouse scroller-->
+  <span class="mouseScroll"></span>
+
+  <!--About section-->
+  <div class="about">
+
+    <div class="hideme">
+      <h1>Who are we?</h1>
+    </div>
+
+    <div class="hideme">
+      <div id="mission">
+   <p>If you have a brand, we have an experience that can add an additional dimension to it. As one of the foremost event management companies in Bangalore, from niche one-on-one meetings, to gala events that draw thousands, we conceptualise, execute, and deliver memorable solutions, with minimal stress. </p>
+      </div>
+    </div>
+
+    <!--Contact box-->
+    <div class="hideme">
+      <div class="container"></div>
+      <div class="cube">
+        <div class="default-state">
+          <span>Contact  Us</span>
+        </div>
+        <div class="active-state">
+          <span>admin@blkrabbit.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sponsors section-->
+  <div class="sponsors">
+    <div class="hideme">
+      <h2>Someone think of text to put here</h2>
+    </div>
+  </div>
+
+  <!--Social section-->
+  <div class="social">
+    <span class="hideme">
+      <a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </span>
+  </div>
+
+  <script type="text/javascript" src="js/home.js"></script>
+
+</body>
+
+</html>

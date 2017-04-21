@@ -1,0 +1,46 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/home.css" />
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'/>
+  <link href="http://allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Lato:400,100,300,700,900|Raleway:400,100,200,300,500,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/navbar.js"></script>
+  <script>
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+  
+  window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+  </script>
+</head>
+
+<body>
+<span class="desktop">
+    <header>
+      <span id="logo">Black Rabbit</span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About Us</a>
+        <a href="#">Login</a>
+      </nav>
+    </header>
+  </span>
+  
+  <script src="js/home.js"></script>
+  </body>
+  
+</html>
